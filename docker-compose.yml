@@ -23,7 +23,7 @@ services:
     image: grundic/jamulus
     restart: always
     ports:
-      - "22124:22125/udp"
+      - "22125:22124/udp"
     entrypoint:
       - "Jamulus"
       - "--server"
@@ -41,7 +41,7 @@ services:
     image: grundic/jamulus
     restart: always
     ports:
-      - "22124:22126/udp"
+      - "22126:22124/udp"
     entrypoint:
       - "Jamulus"
       - "--server"
