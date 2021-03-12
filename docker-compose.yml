@@ -1,0 +1,50 @@
+version: "3.7"
+services:
+  jamulus1:
+    container_name: jamulus
+    image: grundic/jamulus
+    restart: always
+    ports:
+      - "22124:22124/udp"
+    entrypoint:
+      - "Jamulus"
+      - "--server"
+      - "--nogui"
+      - "--welcomemessage"
+      - "MIT VGO ^-^"
+      - "--numchannels"
+      - "16"
+      - "--recording"
+      - "./recordings/channel1"
+  jamulus2:
+    container_name: jamulus
+    image: grundic/jamulus
+    restart: always
+    ports:
+      - "22124:22125/udp"
+    entrypoint:
+      - "Jamulus"
+      - "--server"
+      - "--nogui"
+      - "--welcomemessage"
+      - "MIT VGO ^-^"
+      - "--numchannels"
+      - "16"
+      - "--recording"
+      - "./recordings/channel2"
+  jamulus3:
+    container_name: jamulus
+    image: grundic/jamulus
+    restart: always
+    ports:
+      - "22124:22126/udp"
+    entrypoint:
+      - "Jamulus"
+      - "--server"
+      - "--nogui"
+      - "--welcomemessage"
+      - "MIT VGO ^-^"
+      - "--numchannels"
+      - "16"
+      - "--recording"
+      - "./recordings/channel3"
