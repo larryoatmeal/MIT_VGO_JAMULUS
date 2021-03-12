@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   jamulus1:
-    container_name: jamulus
+    container_name: jamulus1
     image: grundic/jamulus
     restart: always
     ports:
@@ -19,7 +19,7 @@ services:
       - "--servername"
       - "MIT VGO ROOM 1"
   jamulus2:
-    container_name: jamulus
+    container_name: jamulus2
     image: grundic/jamulus
     restart: always
     ports:
@@ -37,7 +37,7 @@ services:
       - "--servername"
       - "MIT VGO ROOM 2"
   jamulus3:
-    container_name: jamulus
+    container_name: jamulus3
     image: grundic/jamulus
     restart: always
     ports:
