@@ -14,6 +14,9 @@ services:
       - "MIT VGO ^-^"
       - "--numchannels"
       - "16"
+      - "--recording"
+      - "rec-room1"
+      - "--norecord"
   jamulus2:
     container_name: jamulus2
     image: grundic/jamulus
@@ -28,6 +31,9 @@ services:
       - "MIT VGO ^-^"
       - "--numchannels"
       - "16"
+      - "--recording"
+      - "rec-room2"
+      - "--norecord"
   jamulus3:
     container_name: jamulus3
     image: grundic/jamulus
@@ -42,3 +48,6 @@ services:
       - "MIT VGO ^-^"
       - "--numchannels"
       - "16"
+      - "--recording"
+      - "rec-room3"
+      - "--norecord"
