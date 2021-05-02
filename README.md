@@ -10,7 +10,7 @@
 - To stop servers: `sudo docker-compose down`
 
 
-# Starting/Stoppping Recording
+# Starting/Stopping Recording
 - `ps aux | fgrep Jamulus | fgrep -v grep` to list running Jamulus instances
 - Copy the pid of the room you want to control (2nd column) 
 - `sudo kill -s SIGUSR2 {THE PID}` (without the curly braces) toggles recording on and off
