@@ -4,6 +4,8 @@ services:
     container_name: jamulus1
     image: grundic/jamulus
     restart: always
+    volumes:
+      - ./room1:/rec
     ports:
       - "22124:22124/udp"
     entrypoint:
@@ -15,7 +17,7 @@ services:
       - "--numchannels"
       - "16"
       - "--recording"
-      - "rec-room1"
+      - "/rec"
       - "--norecord"
   jamulus2:
     container_name: jamulus2
