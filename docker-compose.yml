@@ -13,7 +13,7 @@ services:
       - "--server"
       - "--nogui"
       - "--welcomemessage"
-      - "MIT VGO ^-^"
+      - "MIT VGO ^-^: Room 1 🔥"
       - "--numchannels"
       - "16"
       - "--recording"
@@ -23,6 +23,8 @@ services:
     container_name: jamulus2
     image: grundic/jamulus
     restart: always
+    volumes:
+      - ./room2:/rec
     ports:
       - "22125:22124/udp"
     entrypoint:
@@ -30,16 +32,18 @@ services:
       - "--server"
       - "--nogui"
       - "--welcomemessage"
-      - "MIT VGO ^-^"
+      - "MIT VGO ^-^: Room 2 💧"
       - "--numchannels"
       - "16"
       - "--recording"
-      - "rec-room2"
+      - "/rec"
       - "--norecord"
   jamulus3:
     container_name: jamulus3
     image: grundic/jamulus
     restart: always
+    volumes:
+      - ./room3:/rec
     ports:
       - "22126:22124/udp"
     entrypoint:
@@ -47,9 +51,9 @@ services:
       - "--server"
       - "--nogui"
       - "--welcomemessage"
-      - "MIT VGO ^-^"
+      - "MIT VGO ^-^: Room 3 🍃"
       - "--numchannels"
       - "16"
       - "--recording"
-      - "rec-room3"
+      - "/rec"
       - "--norecord"
